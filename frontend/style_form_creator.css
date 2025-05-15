@@ -1,0 +1,300 @@
+@font-face {
+    font-family: vazir ;
+    src: url(/frontend/entity/font/Vazir.eot);
+    src: url(/frontend/entity/font/Vazir.ttf),
+    url(/frontend/entity/font/Vazir.woff),
+    url(/frontend/entity/font/Vazir.woff2);  
+}
+
+body{
+    background-color: rgb(236, 232, 217);
+    font-family: vazir;
+    margin: 0;
+    direction: rtl;
+}
+
+input,textarea{
+    font: inherit;
+}
+
+textarea {
+    width: 70%;
+    height: auto; 
+    resize: vertical;  
+    min-height: fit-content;
+  }
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu-bar{
+    padding: 5px 30px 0 110px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.preview-button{
+    background-color: #ead21dcb;
+    font: inherit;
+    border: hidden;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 0 1px 16px -8px rgb(0,0,0,0.24);
+    cursor: pointer;
+}
+
+.main-box{
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form-and-template{
+    width: 75%;
+}
+
+.items-menu{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.templates{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    padding: 0;
+    border-radius: 5px;
+    overflow-x:hidden;
+}
+
+.style-temp{
+    text-align: center;
+    margin:0 15px;
+    padding:  10px;
+    width: 30%;
+    box-shadow: 0 1px 16px -8px rgb(0,0,0,0.24);
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.style-temp:hover{
+    background-color: #88b;
+    
+}
+
+.active{
+    background-color: rgba(190, 41, 41, 0.662);
+}
+
+.form{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px ;
+    padding: 15px 35px ;
+    min-height: 400px;
+    min-width: 250px;
+    background-color: #eee;
+    border-radius: 30px;
+    border: 2px dashed #88b;
+}
+
+.drop-place{
+    border-radius: 10px;
+}
+
+#save-print{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.form-button{
+    font: inherit;
+    display:flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #eee;
+    margin: 0 15px;
+    border-radius: 40px;
+    border: 3px solid #ead21dcb;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-button:hover{
+    box-shadow: 0 1px 16px -8px rgb(0,0,0,0.24);
+}
+
+#menu{
+    align-items: center;
+    flex-wrap:wrap;
+    background-color: #05283c;
+    color: #fff;
+    border-radius: 20px;
+    max-height: 438px;
+    overflow-y:auto;
+    margin: 15px 0;
+}
+
+.item{
+    font-size: 18px;
+    text-align: center;
+    padding: 30px;
+    margin: 10px 0;
+    border: 2px solid #05283c;
+    border-radius: 20px;
+    cursor:grab;
+}
+
+.item:hover{
+    border: 2px solid #fff;
+}
+
+#end-law{
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top:1rem ;
+    text-align: center; 
+    font-size: small;
+}
+
+.form-items{
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #999;
+    
+}
+
+.text-item{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.input-items{   
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 30%;
+    background-color: inherit;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    outline: none;
+}
+
+.name-form{
+    width: 100%;
+    border-bottom: 1px solid #999;  
+}
+
+.main-sub{
+    border: 3px hidden;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.main-sub input{
+    background-color: #eee;
+    outline: none;
+    border: hidden;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.font-big{
+    font-family: vazir;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.font-small{
+    font-family: vazir;
+    font-size: 12px;
+}
+
+.borderOn{
+    border: 2px solid #00c;
+    border-radius: 4px;
+}
+
+.multi-items{
+    display:flex;
+    flex-direction: column;
+}
+
+.between-items{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tel-style{
+    direction: ltr;
+    float: left;
+    margin: 0 122px;
+}
+
+.direction{
+    direction: ltr;
+}
+
+.signeture{
+    float: left;
+    margin: 30px ;
+    padding: 10px;
+}
+
+.delete-button{
+    position: absolute;
+    border-radius: 50px;
+    background-color: rgba(190, 41, 41, 0.662) ;
+    font: inherit;
+    font-size: small;
+    cursor: pointer;
+    left: 10px ;
+    top: 21px;
+    margin: 5px;
+    padding: 15px;
+    border: hidden;
+    box-shadow: 0 1px 16px -8px rgb(0,0,0,0.24) ;
+}
+
+@media print {
+    body *{
+        visibility: hidden;
+    }
+
+    .printable-form,.printable-form *{
+        visibility: visible;
+    }
+
+    .printable-form{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    @page{
+        size: auto;
+        margin: 0;
+    }
+
+
+}

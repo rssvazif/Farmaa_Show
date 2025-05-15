@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/style_sign_up.css">
+    <title>فارما | ثبت نام</title>
+    <link rel="icon" type="image/x-icon" href="/frontend/entity/atom (1).svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="sign-up">
+
+
+        <div id="container">
+        
+            <div id="welcome-box">
+                <div class="empty-big"></div>  
+
+                <a href="/" class="farmaa-logo">
+                    <img src="/frontend/entity/atom (1).svg" alt="Farmaa" width="160" height="160">
+                </a>
+                <h1>ثبت نام برای دسترسی رایگان</h1>
+                <h3>
+                    خوش آمدید به فارما !! همین الان بدون نیاز به هیچ پیش نیازی و رایگان شروع کنید.
+                </h2>
+            </div>
+
+            <div id="sign-up-box">
+                <div class="empty-big"></div>
+                <div id="field-items">
+                    <form @submit="sendUser">
+                        <div>
+                            <div>
+                                <input type="text" placeholder="نام کاربری" v-model="userData.username" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="email" placeholder="ایمیل" v-model="userData.email" required>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <input type="password" placeholder="گذرواژه" v-model="userData.password" required>
+                            </div>
+                        </div>
+
+                        <div class="empty-small"></div>
+
+                        <div class="button-div">
+                            <button type="submit" id="sign-up-data">
+                                ثبت نام
+                            </button>
+                        </div>
+                        <a href="/api/auth/google">
+                            <div class="button-div">
+                                <button type="button" id="sign-up-google">
+                                    <div style="height: fit-content;">ورور با حساب گوگل</div>
+                                    <div>
+                                        <img src="/frontend/entity/Papirus-Team-Papirus-Apps-Google.svg" alt="google" width="30" height="30">
+                                    </div>
+                                </button>
+                            </div>
+                        </a>
+                        
+
+                        
+                    </form>
+
+                </div>
+                <div id="sign-up-past" @click="showFunction">
+                    <button>
+                        قبلا ثبت نام کردم / ورود
+                    </button>
+                </div>
+            </div>
+
+            <div v-show="tuggle_signUp_past" class="overlay"></div>
+            <div v-show="tuggle_signUp_past" class="modal old-user">
+                <h3>ورود به فارما</h3>
+                <input class="no-marging" v-model="oldUser.email" type="email" placeholder="ایمیل خود را وارد کنید" >
+                <input class="no-marging" v-model="oldUser.password"  type="password" placeholder="گذرواژه خود را وارد کنید">
+                <div>
+                    <button class="enter" @click="loginUser">ورود</button>
+                </div>
+                
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+
+<script src="/frontend/sign_up.js"></script>
+<script>
+    window.onload = function () {
+    const token = localStorage.getItem('token');
+    if (token) {
+        window.location.href = '/my_form';
+    }
+}
+</script>
+</body>
+</html>

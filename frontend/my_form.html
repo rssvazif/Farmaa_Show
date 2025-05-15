@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/style_my_form.css">
+    <title>فارما | فرم های من</title>
+    <link rel="icon" type="image/x-icon" href="/frontend/entity/atom (1).svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="main-box">
+        <div id="menu-bar">
+            <a href="/frontend/index.html" title="Farmaa">
+                <div id="logo-web">
+                    <div>
+                        <img src="/frontend/entity/atom (1).svg" alt="Farmaa" width="65" height="50">
+                    </div>
+                    <div>
+                        <strong>فارما</strong>
+                    </div>
+                </div>
+            </a>
+            <div id="user-items">
+                <a href="/frontend/form_creator.html" @click="checkFormId">
+                    <div id="create-form">
+                        <span>تولید فرم</span>
+                    </div>
+                </a>
+                <div @click="show_user_menu">
+                    <img src="/frontend/entity/circle user.svg" alt="user" width="38" height="38" id="user-icon">
+                </div>
+                <div class="user-menu" v-show="tuggle_user">
+                    <span>منو کاربر</span>
+                    <div class="user-menu-style">
+                        <a href="#" class="user-menu-items">تنظیمات حساب کاربری</a>
+                        <img src="/frontend/entity/gear-dark.svg" alt="gear" width="15" height="15"> 
+                    </div>
+                    <div class="user-menu-style">
+                        <a href="#" class="user-menu-items">دعوت دوستان</a>
+                        <img src="/frontend/entity/user group.svg" alt="users" width="15" height="15">
+                    </div>
+                    <div class="user-menu-style" @click="logoutUser">
+                        <a class="user-menu-items">خروج از حساب</a>
+                        <img src="/frontend/entity/lock keyhole.svg" alt="lock" width="15" height="15">    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <br>
+
+        <div id="dashboard">
+            <div id="menu-form">
+                <div>
+                    <input v-model="searchInput" @input="searchForms" type="search" placeholder="اسم فرم را وارد کنید">
+                </div>
+           
+            </div>
+
+           
+
+            <div id="sp-form">
+                <div id="title-form">
+                    <div id="subject">
+                        <h1>
+                            
+                            داشبورد
+                        </h1>
+                    </div>
+                    <div id="sort-form">
+                        <div>
+                            <select name="" id="sort-box">
+                                <option value="الفبا" >به ترتیب الفبا</option>
+                                <option value="ساخت" selected>به ترتیب تاریخ</option>
+                            </select>
+                        </div>
+                        <img src="/frontend/entity/arrow down wide short.svg" alt="sort" width="30" height="20">
+                    </div>
+
+                </div>
+
+                <div v-for="form in forms" class="form-holder" :key="form._id">
+                    <div>
+                        <span> نام فرم:
+                            <b>
+                                {{form.name}}
+                            </b>
+                        </span>
+                    </div>
+                    <div class="overlay" v-show="sure_delete"></div>
+                    <div class="modal check-confirm" v-show="sure_delete">
+                        <b style="text-align: center;">آیا برای حذف فرم مطمئن هستید؟</b>
+                        <div class="display-class flex-class">
+                            <button class="color-red button-dashboard" @click="deleteForm" >حذف</button>
+                            <button class="color-yellow button-dashboard" @click="sure_delete = false">انصراف</button>
+                        </div>
+                    </div>
+                    <div class="overlay" v-show="sure_name"></div>
+                    <div class="modal check-confirm" v-show="sure_name">
+                        <b style="text-align: center;">تغییر نام فرم ذخیره شده</b>
+                        <input v-model="new_name" type="text" class="input-dashboard" placeholder="نام جدید را وارد کنید">
+                        <div class="display-class flex-class">
+                            <button class="color-red button-dashboard" @click="renameForm(form._id)">تغییر</button>
+                            <button class="color-yellow button-dashboard" @click="sure_name = false">انصراف</button>
+                        </div>
+                    </div>
+                    
+                    <div class="display-class">
+                        <button type="button" class="button-style" @click="confirmDelete(form._id)">
+                            <span>حذف</span>
+                            <img src="/frontend/entity/trash.svg" alt="trash" width="16" height="16">
+                        </button>
+                        <button type="button" class="button-style " @click="confirmRename()">
+                            <span>تغییر نام</span>
+                            <img src="/frontend/entity/rename.svg" alt="edit" width="16" height="16">
+                        </button>
+                        <button class="button-style" @click="goToForm(form._id)">
+                            <span>ویرایش</span>
+                            <img src="/frontend/entity/edit.svg" alt="edit" width="16" height="16">
+                        </button>
+                    </div>
+                </div>
+
+                <div id="add-box">
+                    <div id="add-form" @click="checkFormId">
+                        <a href="/frontend/form_creator.html">
+                            <div id="add-text">
+                                
+                                    <span>فرم جدید</span>
+                                <img src="/frontend/entity/plus.svg" alt="plus" width="18px" height="18px">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script src="/frontend/my_form.js"></script>
+</html>

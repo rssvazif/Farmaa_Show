@@ -1,0 +1,232 @@
+@font-face {
+    font-family: vazir ;
+    src: url(/frontend/entity/font/Vazir.eot);
+    src: url(/frontend/entity/font/Vazir.ttf),
+    url(/frontend/entity/font/Vazir.woff),
+    url(/frontend/entity/font/Vazir.woff2);  
+}
+
+body{
+    font-family: vazir;
+    margin: 0;
+    direction: rtl;
+    background-color: #eee;
+}
+
+#main{
+    margin-bottom: 3rem;
+}
+
+
+#header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    font-size: 17px;
+}
+
+#logo-farmaa{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.username{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ead21dcb;
+    border-radius: 15px;
+}
+
+
+#logo-farmaa  strong{
+    font-size: 45px;
+    text-decoration: bold;
+}
+#menu-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#menu-bar-button{
+    display: flex;
+    width: 60%;
+    margin-right:10px ;
+}
+
+#menu-bar-button a:hover{
+    border-bottom: 1px solid #999;
+}
+
+#sign-up{
+    float: left;
+    margin:22px ;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #ead21dcb;
+}
+
+.bar-keys{
+    width: fit-content;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+h1,h2{
+    display: inline-block;
+}
+
+h1,h2,p{
+    margin: 18px 0;
+    padding: 15px 0;
+}
+
+.farmaa-image , #farmaa-welcome {
+    display: inline-block;
+}
+
+#farmaa-welcome{
+    margin: 30px 150px 30px 60px;
+}
+
+
+
+.images{
+    border-radius: 15px;
+    box-shadow: 8px 8px 5px 1px #999;
+    margin: 50px 80px 30px 10px;
+    width: 550px;
+    height: 400px;
+}
+
+#start-job{
+    background-color: #ead21dcb;
+    text-decoration: none;
+    padding: 10px 30px; 
+    border-radius: 20px;
+    color: #000;
+}
+
+#farmaa-property{
+    background-color: rgba(4, 4, 64, 0.811);
+    color: white;
+    margin: 10px 0 0 0;
+}
+
+
+#farmaa-property div h2,#farmaa-goals div h2{
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 16px;
+}
+
+.description{
+    display: inline-table;
+    width: fit-content;
+    padding: 13px;
+    margin: 0 80px;
+}
+
+#farmaa-goals{
+    background-color:rgb(236, 232, 217);
+}
+
+
+.center{
+    text-align: center;
+}
+.display{
+    display: inline-block;
+    margin: 30px 130px 90px 130px;
+    padding: 10px;
+}
+
+#farmaa-future{
+    background-image: url(./entity/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.future-icon{
+    display: block;
+}
+
+
+#text-future{
+    float: left;
+    margin: 100px 0 50px 200px ;
+    padding: 10px;
+}
+
+footer{
+    background-color:rgb(236, 232, 217);
+    padding: 20px;
+}
+
+footer strong{
+    background-color: #ead21dcb;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+#footer-section{
+    padding: 50px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top:2rem;
+
+}
+
+.footer-box{
+    min-width: 150px;
+}
+
+.entity-footer{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#footer-section a:hover{
+    text-decoration: underline;
+}
+
+#none-dec a:hover{
+    text-decoration: none;
+}
+
+.footer-box a{
+    padding: 3px;
+    text-decoration: none;
+}
+
+#end-law{
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top:1rem ;
+    text-align: center; 
+    font-size: small;
+}
+
+
+
+
+
+
+
+

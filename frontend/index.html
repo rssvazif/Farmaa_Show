@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" ,maximum-scale=1.0 , user-scalable=no>
+    <link rel="stylesheet" href="/frontend/style_main.css">
+    <title>فارما | سایت تخصصی ساخت فرم</title>
+    <link rel="icon" type="image/x-icon" href="/frontend/entity/atom (1).svg">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+
+
+            <div id="logo-farmaa">
+                <div>
+                    <a href="/frontend/index.html"><img src="/frontend/entity/atom (1).svg" width="65px" height="50px" alt="فارما" title="Farmaa">
+                    </a>
+                </div>
+                <div>
+                    <a href="/frontend/index.html" title="Farmaa"><strong>فارما</strong></a>
+                </div>
+                
+            </div>
+
+            <div id="menu-bar">
+                <div id="menu-bar-button">
+                    <a href="/frontend/my_form.html"><span title="Myforms" class="bar-keys">فرم های من</span></a>
+                    <a href="/frontend/guid.html"><span title="Items" class="bar-keys">راهنمای استفاده</span></a>
+                    <a href="/frontend/aboutUs.html"><span title="About us" class="bar-keys">درباره ما</span></a>
+                </div>
+                
+                <div>
+                    <div v-if="status">
+                        <a href="/frontend/sign_up.html" title="Sign up" id="sign-up"><img style="margin: 0 5px;" src="/frontend/entity/user.svg" width="17px" height="17px">ورود / ثبت نام</a>
+                    </div>
+                    <div class="username" v-else>
+                        <a href="/frontend/user_page.html" title="User page">
+                            <b>
+                                {{username}} 
+                            </b>
+                        </a>
+                        <img src="/frontend/entity/user.svg" alt="user" width="25" height="25">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="farmaa-welcome">
+            <h1>
+                آسان ترین راه<br>
+                برای ساخت
+                فرم های آنلاین
+            </h1><br>
+            <h2>
+                به سرعت فرم خودتو بساز!!
+            </h2>   
+            <p>
+                با استفاده از ابزارهای ما،<br> می‌توانید به راحتی و بدون نیاز به دانش فنی،<br> فرم‌های آنلاین خود را طراحی کنید.
+                <br>
+                با ما همراه باشید و تجربه‌ای جدید از ساخت فرم‌های آنلاین را تجربه کنید.
+            </p>
+
+            <a href="/frontend/sign_up.html" id="start-job">رایگان شروع کنید</a>
+            <small>برای دسترسی رایگان ابتدا ثبت نام کنید</small>
+        </div>
+        <div class="farmaa-image">
+            <img src="/frontend/entity/what-computer-programming-jobs-offer-remote-work-jpg.webp" alt="عکس از فارما" width="550px" height="380px" class="images">
+        </div>
+    </div>
+
+
+
+    <div id="farmaa-property">
+        
+        <div>
+            <h2>
+                امکانات کلیدی فارما
+            </h2>    
+        </div>
+        <div class="description">
+            <img src="/frontend/entity/rectangle vertical history-64 (1).png" alt="مدیریت فایل ها"><br>
+            <b>
+                مدیریت فایل های ساخته شده 
+            </b>
+            <p>
+                شما می توانید فایل هایی را که <br>
+                در گذشته تولید کرده اید، <br>
+                بررسی و اصلاح کنید .
+            </p>
+        </div>
+        <div class="description">
+            <img src="/frontend/entity/image user-64.png" alt="سیستم ثبت نام"><br>
+            <b>
+                ثبت نام امن
+            </b>
+            <p>
+                در فارما می توانید <br>
+                جهت تولید و مدیریت فرم های<br>
+                اداری یا شخصی خود <br>
+                به صورت امن ثبت نام کنید.
+            </p>
+        </div>
+        <div class="description">
+            <img src="/frontend/entity/image user-64.png" alt="خروجی سیستم"><br>
+            <b>
+                دانلود فرم با فرمت های دلخواه
+            </b>
+            <p>
+                پس از تولید فرم ایده آل خود ،<br>
+                می توانید در فرمت های مختلف<br>
+                آن را دانلود کنید.
+            </p>
+        </div>
+        <div class="description">   
+            <img src="/frontend/entity/bolt lightning-64.png" alt="تولید جذاب"><br>
+            <b>
+                قابلیت کشیدن و رها سازی
+            </b>
+            <p>
+                یکی از جذابیت های<br>
+                پروژه فارما قابلیت <br>
+                drag و drop کردن <br>
+                آیتم ها جهت ساخت<br>
+                 فرم مدنظر است.
+            </p>
+        </div>
+    </div>
+    
+
+    <div id="farmaa-goals">
+        <div>
+            <h2>
+                اهداف فارما
+            </h2>
+        </div>
+        
+        <div class="center">
+            <div class="display">
+                <img src="/frontend/entity/paperform_icon_easy_learn_black.svg" alt="picture" width="160px" height="160px" class="future-icon">
+                <b>
+                    هوشمند سازی تولید فرم
+                </b>
+            </div>
+
+            <div class="display">
+                <img src="/frontend/entity/paperform_icon_easy_master_black.svg" alt="picture" width="160px" height="160px" class="future-icon">
+                <b>
+                    مدیریت راحت تر فرم ها
+                </b>
+            </div>
+
+            <div class="display">
+                <img src="/frontend/entity/paperform_icon_beautiful_brandable_black.svg" alt="picture" width="160px" height="160px" class="future-icon">
+                <b>
+                    امکان ویرایش آسان فرم ها
+                </b>
+
+            </div>
+                
+        </div>
+    </div>
+
+    <div id="farmaa-future">
+        <div id="text-future">
+            <header>
+                <h2>
+                    آینده فارما
+                </h2>    
+            </header>
+            <ul>
+                <li>اضافه کردن آیتم های بیشتر</li>
+                <li>بهبود تجربه کاربری</li>
+                <li>امکان ذخیره سازی فرم ها در فضای ابری</li>
+                <li>قابلیت تولید فرم به زبان انگلیسی</li>
+                <li>اضافه کردن مدل های مبتنی بر هوش مصنوعی</li>
+            </ul>
+        </div>
+        
+
+    </div>
+
+    <footer>
+        <div>
+          <h3>فرمان کارتو بسپار به <strong>فارما</strong> 🚀</h3>
+          <p>
+            <small>فارما پروژه‌ای است با هدف هوشمندسازی تولید فرم‌های اداری و شخصی.</small>
+          </p>
+        </div>
+      
+        <div id="footer-section">
+      
+          <div class="footer-box">
+            <b>مجموعه فارما</b>
+            <ul class="entity-footer">
+              <li><a href="#">درباره ما</a></li>
+              <li><a href="#">ارتباط با ما</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-box">
+            <b>خدمات</b>
+            <ul class="entity-footer">
+              <li><a href="#">قالب فرم‌ها</a></li>
+              <li><a href="#">آیتم‌ها</a></li>
+              <li><a href="#">خروجی فرم</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-box">
+            <b>راهنما</b>
+            <ul class="entity-footer">
+              <li><a href="#">نحوه استفاده</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-box" id="none-dec">
+            <b>ما را دنبال کنید</b>
+                <div>
+                <a href="mailto:rezavazifedost@gmail.com">
+                    <img src="/frontend/entity/icons8-gmail.svg" width="24" alt="Gmail" />
+                </a>
+                <a href="https://t.me/RVD_M">
+                    <img src="/frontend/entity/icons8-telegram-app.svg" width="24" alt="Telegram" />
+                </a>
+                <a href="https://www.linkedin.com/in/reza-vazifeh-doust-b72b05271">
+                    <img src="/frontend/entity/icons8-linkedin-2048.svg" width="24" alt="LinkedIn" />
+                </a>
+                </div>
+            </div>
+
+      
+        </div>
+      
+        <div id="end-law">
+          © 2025 Farmaa.ir | تمام حقوق محفوظ است
+        </div>
+      </footer>
+
+       
+</body>
+<script src="/frontend/main.js"></script>
+</html>
