@@ -122,7 +122,7 @@ createApp({
                 this.apiUrl = false
                 localStorage.removeItem('formId')
 
-                window.location.href = '/my_form'
+                window.location.href = '/my_form.html'
                 alert('فرم با موفقیت ذخیره شد')
 
                 
@@ -178,7 +178,7 @@ createApp({
         async loadFormData(formId){
             const token = localStorage.getItem('token')
             if(!token){
-                window.location.href = '/sign_up'
+                window.location.href = '/sign_up.html'
                 return
             }
 

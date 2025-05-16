@@ -28,7 +28,7 @@ createApp({
         async getForms(){
           const token = localStorage.getItem('token')
           if(!token){
-            window.location.href = '/sign_up'
+            window.location.href = '/sign_up.html'
             return
           }
           try{
@@ -55,7 +55,7 @@ createApp({
         async deleteForm(){
           const token = localStorage.getItem('token')
             if(!token){
-              window.location.href = '/sign_up'
+              window.location.href = '/sign_up.html'
               return
             }
           try{
@@ -87,7 +87,7 @@ createApp({
         async renameForm(formId){
           const token = localStorage.getItem('token')
           if(!token){
-            window.location.href = '/sign_up'
+            window.location.href = '/sign_up.html'
             return
           }
 
@@ -192,7 +192,7 @@ createApp({
       }
       const token = localStorage.getItem('token')
       if(!token){
-        window.location.href = '/sign_up'
+        window.location.href = '/sign_up.html'
       }
       this.getForms()
     }
