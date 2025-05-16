@@ -10,6 +10,8 @@ services:
       - farmaa_data:/data/db
     environment:
       MONGO_INITDB_DATABASE: farmaaDB
+    networks:
+      - app_network
 
   backend:
     build: ./backend

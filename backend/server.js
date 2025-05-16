@@ -165,7 +165,7 @@ app.put('/api/form/:id',async (req,res)=>{
     const decoded = jwt.verify(token,secretkey)
     const userId = decoded.userId
 
-    const {name,sub_name,fields} = req.body
+    const {name} = req.body
 
     const formId = req.params.id
 
@@ -178,8 +178,8 @@ app.put('/api/form/:id',async (req,res)=>{
     }
 
     form.name = name
-    form.sub_name = sub_name
-    form.fields = fields
+    // form.sub_name = sub_name
+    // form.fields = fields
     await form.save()
     res.status(200).json({message:'فرم با موفقیت به روزرسانی شد'})
 

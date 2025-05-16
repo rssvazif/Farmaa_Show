@@ -18,9 +18,7 @@ createApp({
         sure_name: false,
         formToDelete: null,
         new_name: '',
-        searchInput: '',
-        filteredForms: null
-
+        searchInput: ''
     }
 
 
@@ -111,14 +109,18 @@ createApp({
             throw new Error('خطا در تغییر نام فرم')
           }
           const result = await response.json()
-          const updatedForm = result.form
+          // const updatedForm = result.form
 
-          const index = this.forms.findIndex(form => form._id === updatedForm._id)
-          if(index !== -1){
-            this.forms[index].name = updatedForm.name
-            this.filteredForms[index].name = updatedForm.name
-          }
-
+          // const index = this.forms.findIndex(form => form._id === updatedForm._id)
+          // if(index !== -1){
+          //   this.forms[index].name = updatedForm.name
+          //  this.filteredForms[index].name = updatedForm.name
+          //}
+		//this.forms[this.index_form].name = this.new_name
+         	const index = this.forms.findIndex(form => form._id === formId);
+		if (index !== -1) {
+		    this.forms[index].name = this.new_name;
+		}
           this.new_name = ''
           this.sure_name = false
 
@@ -165,7 +167,7 @@ createApp({
       },
       goToForm(id){
         localStorage.setItem('formId', id)
-        window.location.href = '/form_creator'
+        window.location.href = '/form_creator.html'
       },
       searchForms(){
         this.forms = this.forms.filter(form =>
