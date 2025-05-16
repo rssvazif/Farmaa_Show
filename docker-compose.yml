@@ -1,0 +1,46 @@
+
+services:
+  mongodb:
+    image: mongo:4.4.6
+    container_name: farmaa-mongodb
+    restart:  unless-stopped
+    ports:
+      - 27017:27017
+    volumes:
+      - farmaa_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: farmaaDB
+
+  backend:
+    build: ./backend
+    container_name: farmaa-backend
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    ports:
+      - 3000:3000
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - mongodb
+    networks:
+      - app_network
+
+  frontend:
+    build: ./frontend
+    container_name: farmaa-frontend
+    restart: unless-stopped
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+    networks:
+      - app_network
+    environment:
+        VUE_APP_API_BASE_URL: http://farmaa-backend:3000
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  farmaa_data:
