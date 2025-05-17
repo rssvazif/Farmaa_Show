@@ -1,9 +1,9 @@
 @font-face {
     font-family: vazir ;
-    src: url(/frontend/entity/font/Vazir.eot);
-    src: url(/frontend/entity/font/Vazir.ttf),
-    url(/frontend/entity/font/Vazir.woff),
-    url(/frontend/entity/font/Vazir.woff2);  
+    src: url(/entity/font/Vazir.eot);
+    src: url(/entity/font/Vazir.ttf),
+    url(/entity/font/Vazir.woff),
+    url(/entity/font/Vazir.woff2);  
 }
 
 *{
